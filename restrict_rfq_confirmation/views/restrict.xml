@@ -1,0 +1,17 @@
+
+
+<odoo>
+    <data>
+<!--     The below code is for adding a check box in user setting   -->
+        <record id="view_res_users_form_inherit" model="ir.ui.view">
+            <field name="name">res.users.form.inherit</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.user_groups_view" />
+            <field name="arch" type="xml">
+                 <xpath expr="//field[@name='in_group_3']" position="after">
+                    <field name="can_confirm_purchase" string ="Authorize to confirm RFQ- > PO"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
